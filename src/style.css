@@ -52,7 +52,7 @@ h4 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 5%;
     overflow-x: visible;
     width: 100%;
 }
@@ -106,8 +106,8 @@ header {
     height: 90px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
+    justify-content: center;
+    padding: 0;
     background-color: rgba(30, 33, 24, 0.3);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -118,6 +118,16 @@ header {
     z-index: 1000;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header.scrolled {
@@ -356,7 +366,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(30, 33, 24, 0.5), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(to bottom, rgba(20, 24, 18, 0.65), rgba(0, 0, 0, 0.6));
     z-index: 1;
 }
 
@@ -375,7 +385,8 @@ nav ul li a:hover {
     font-style: normal;
     line-height: 1.7;
     margin-bottom: 0.5rem;
-    opacity: 0.9;
+    opacity: 1;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
@@ -387,9 +398,10 @@ nav ul li a:hover {
     font-weight: 700;
     letter-spacing: -0.03em;
     text-shadow: 
-        2px 2px 0px rgba(0, 0, 0, 0.3),
-        0 10px 40px rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.1);
+        0 1px 2px rgba(0, 0, 0, 0.8),
+        0 2px 4px rgba(0, 0, 0, 0.6),
+        0 4px 12px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(0, 0, 0, 0.4);
     white-space: normal;
     word-wrap: break-word;
 }
@@ -402,7 +414,7 @@ nav ul li a:hover {
     font-style: normal;
     font-family: var(--font-sans);
     line-height: 1.7;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Sections */
@@ -592,11 +604,11 @@ footer {
 /* Mobile styles */
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 5%;
     }
     
     header {
-        padding: 0 1rem;
+        padding: 0;
         height: 70px;
     }
     
@@ -864,28 +876,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Suavizar bordes del carrusel para que no se vean cards cortadas */
-.ejes-container::before,
-.ejes-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 120px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.ejes-container::before {
-    left: 0;
-    background: linear-gradient(to right, var(--beige-dark) 0%, transparent 100%);
-}
-
-.ejes-container::after {
-    right: 0;
-    background: linear-gradient(to left, var(--beige-dark) 0%, transparent 100%);
-}
-
 .ejes-track {
     display: flex;
     gap: 1.5rem;
@@ -1047,11 +1037,11 @@ footer {
 /* Tablet styles - incluye tablet vertical */
 @media (min-width: 768px) and (max-width: 1024px) {
     .container {
-        padding: 0 2rem;
+        padding: 0 5%;
     }
     
     header {
-        padding: 0 3%;
+        padding: 0;
     }
     
     /* Mostrar menú hamburguesa en tablets (vertical y horizontal) */
