@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNDESAE - Desarrollo Socioambiental y Empresarial</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#inicio" class="logo-container">
+            <img src="/hand-holding-leaves.png" alt="FUNDESAE Logo" class="logo-icon-header">
+            <div class="logo">FUNDESAE</div>
+        </a>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Contratos</a></li>
+            </ul>
+        </nav>
+        <a href="#contacto" class="btn header-btn">Contacto</a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+            <i class="material-icons">menu</i>
+        </button>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-menu">
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                <i class="material-icons">close</i>
+            </button>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Contratos</a></li>
+                <li><a href="#contacto" class="mobile-menu-contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section id="inicio" class="hero">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="/2098988-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <p>Tu aliado estratégico para</p>
+                <h1>EL FORTALECIMIENTO SOCIAL Y AMBIENTAL</h1>
+                <p>"Contribuimos a preservar el medio ambiente de manera integral, apoyando al cumplimiento de los fines
+                    sociales del Estado y mejorando la calidad de vida de la población."</p>
+                <div class="hero-buttons">
+                    <a href="#nosotros" class="btn">Conoce más</a>
+                    <button class="btn btn-report" id="report-btn">Reportar problema ambiental</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="container">
+            <div class="section-title">
+                <h2>¿Qué es FUNDESAE?</h2>
+                <div class="divider"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <p>La Fundación para el Desarrollo Socioambiental y Empresarial Especializado
+                        <strong>“FUNDESAE”</strong> es una entidad colombiana sin ánimo de lucro constituida en 2010.
+                        Estamos conformados por un grupo de profesionales interdisciplinarios interesados en promover el
+                        desarrollo económico y empresarial con un fin específico: satisfacer las necesidades
+                        primordiales de la población.
+                    </p>
+                    <br>
+                    <p>Trabajamos por el desarrollo ambiental y socialmente sostenible, dirigido al fortalecimiento
+                        institucional de entidades gubernamentales y no gubernamentales, ofreciendo servicios
+                        profesionales especializados en servicios públicos domiciliarios.</p>
+                </div>
+                <div class="section-image-container">
+                    <img src="/noah-buscher-x8ZStukS2PM-unsplash.jpg" alt="Sostenibilidad Ambiental" class="img-card">
+                </div>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 4rem;">
+                <div class="vision-box">
+                    <h2>Nuestra Visión</h2>
+                    <p>Ser líderes en el fortalecimiento social y ambiental con proyección empresarial, reconocidos a
+                        nivel nacional e internacional como una entidad responsable vigilante de la gestión de los
+                        proyectos y servicios con altos estándares de calidad y sostenibilidad.</p>
+                    <br>
+                    <p>FUNDESAE se consolidará como un grupo de trabajo interdisciplinario especializado en la
+                        implementación de estrategias para lograr un desarrollo social, ambiental y económicamente
+                        sostenible, en búsqueda del mejoramiento de la calidad de vida de la población en el sector de
+                        saneamiento básico y agua potable.</p>
+                </div>
+                <div class="section-image-container">
+                    <img src="/bernd-dittrich-G4tNFiZecoc-unsplash.jpg" alt="Gestión Ambiental" class="img-card">
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 5rem; margin-bottom: 5rem; text-align: center; background-color: white; padding: 4rem; border: 1px solid var(--beige-dark);">
+                <h2 style="margin-bottom: 2rem;">Nuestro Equipo de Trabajo</h2>
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">FUNDESAE cuenta con un
+                    recurso humano idóneo, capacitado para ejecutar todos nuestros proyectos; somos profesionales en
+                    distintas disciplinas y con perfiles y saberes específicos que permitirán satisfacer las necesidades
+                    y demandas de nuestros clientes.</p>
+            </div>
+        </section>
+
+        <section id="componentes" style="background-color: var(--beige-dark);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Componentes de Trabajo</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <i class="material-icons card-icon">support_agent</i>
+                        <h3>Asesoría y Consultoría</h3>
+                        <p>Prestación de servicios profesionales de asesoría, consultoría, interventoría y
+                            capacitaciones con altos estándares de calidad.</p>
+                    </div>
+                    <div class="card">
+                        <i class="material-icons card-icon">build</i>
+                        <h3>Diseño e Implementación</h3>
+                        <p>Programas y proyectos en cooperación con comunidades locales y organizaciones gubernamentales
+                            y no gubernamentales.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 4rem;">
+                    <div class="section-title">
+                        <h2>Ejes Temáticos</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="ejes-container">
+                        <div class="ejes-track">
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">water_drop</span>
+                                <span>Servicios Públicos Domiciliarios</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">business</span>
+                                <span>Fortalecimiento Institucional</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">water</span>
+                                <span>Manejo Integral del Recurso Hídrico</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">eco</span>
+                                <span>Impacto Ambiental y Tecnologías</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">recycling</span>
+                                <span>Sistemas Productivos Sostenibles</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">groups</span>
+                                <span>Responsabilidad Ambiental y Social</span>
+                            </div>
+                            <!-- Duplicados para efecto infinito -->
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">water_drop</span>
+                                <span>Servicios Públicos Domiciliarios</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">business</span>
+                                <span>Fortalecimiento Institucional</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">water</span>
+                                <span>Manejo Integral del Recurso Hídrico</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">eco</span>
+                                <span>Impacto Ambiental y Tecnologías</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">recycling</span>
+                                <span>Sistemas Productivos Sostenibles</span>
+                            </div>
+                            <div class="eje-card">
+                                <span class="material-icons eje-icon">groups</span>
+                                <span>Responsabilidad Ambiental y Social</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="container" style="margin-bottom: 5rem;">
+            <div class="section-title">
+                <h2>Servicios Especializados</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <i class="material-icons card-icon">remove_red_eye</i>
+                    <h3>Interventoría y Supervisión</h3>
+                    <p>Supervisión Integral de Contratos de Operación de servicios públicos domiciliarios de acueducto,
+                        alcantarillado y aseo (contratos de concesión).</p>
+                </div>
+                <div class="card">
+                    <i class="material-icons card-icon">assessment</i>
+                    <h3>Gestión SUI (SSPD)</h3>
+                    <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8; margin-top: 1rem; line-height: 1.4;">
+                        <li>• Seguimiento y monitoreo a recursos del SGP-APSB (Viceministerio de Agua).</li>
+                        <li>• Cargue al Sistema Único de Información de la Superintendencia de Servicios Públicos.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="material-icons card-icon">account_tree</i>
+                    <h3>Esquemas y Estratificación</h3>
+                    <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8; margin-top: 1rem; line-height: 1.4;">
+                        <li>• Diseño de esquemas organizacionales urbanos y rurales.</li>
+                        <li>• Elaboración y actualización de estratificación socioeconómica.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="material-icons card-icon">description</i>
+                    <h3>Planes Ambientales (PMA, PGIRS)</h3>
+                    <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8; margin-top: 1rem; line-height: 1.4;">
+                        <li>• Informes de Recursos Naturales, PSMV, PAUEA.</li>
+                        <li>• Proyectos Ambientales Escolares (PRAES) y Proyectos Sostenibles.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="material-icons card-icon">business</i>
+                    <h3>Fortalecimiento Institucional</h3>
+                    <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8; margin-top: 1rem; line-height: 1.4;">
+                        <li>• MECI, Ley de Archivo, Banco de Proyectos.</li>
+                        <li>• Auditorías Externas, de Gestión y Resultados.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <i class="material-icons card-icon">biotech</i>
+                    <h3>Estudios Biológicos</h3>
+                    <ul style="list-style: none; font-size: 0.9rem; opacity: 0.8; margin-top: 1rem; line-height: 1.4;">
+                        <li>• Caracterización de cuencas hidrográficas.</li>
+                        <li>• Inventarios de flora y fauna y estudios ecológicos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="portafolio" style="background-color: var(--primary-olive); color: var(--text-light);">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color: var(--text-light);">Relación de Contratos</h2>
+                    <div class="divider" style="background-color: var(--text-light);"></div>
+                </div>
+                <div class="contracts-list-container" id="contracts-list">
+                    <!-- Contratos se cargarán dinámicamente desde JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <img src="/hand-holding-leaves.png" alt="FUNDESAE Logo" class="footer-logo-icon">
+                        <h4>FUNDESAE</h4>
+                    </div>
+                    <p>Fundación para el Desarrollo Socioambiental y Empresarial Especializado</p>
+                    <p>NIT. 900.387.099 – 4</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="material-icons footer-icon">phone</i> 3023886273 / 3023886293</p>
+                    <p><i class="material-icons footer-icon">email</i> fundesae@hotmail.com</p>
+                    <p><i class="material-icons footer-icon">location_on</i> Calle 16 No. 17 – 5 Piso 2 Magangué, Bolívar</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><strong>CARMEN LUCIA ALVAREZ LOPEZ</strong></p>
+                    <p>Representante Legal</p>
+                    <br>
+                    <p>Vigilada por la Superintendencia de Economía Solidaria</p>
+                    <p>Personería Jurídica No. 00011508</p>
+                </div>
+            </div>
+            <div class="superintendencia-logo-section">
+                <p style="margin-bottom: 1rem; opacity: 0.7; font-size: 0.85rem;">Vigilada por:</p>
+                <img src="/20230608_imagotipo_supersolidaria_horizontal_0.png" alt="Superintendencia de Economía Solidaria" class="superintendencia-logo">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FUNDESAE. Todos los derechos reservados.</p>
+                <p class="footer-credit">Designed and powered by <a href="https://andresruss.com" target="_blank" rel="noopener noreferrer">andresruss.st</a></p>
+            </div>
+            <a href="#inicio" class="scroll-to-top">
+                <i class="material-icons">arrow_upward</i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Modal de Reporte Ambiental -->
+    <div class="report-modal" id="report-modal">
+        <div class="report-modal-content">
+            <button class="report-modal-close" id="report-modal-close" aria-label="Cerrar">
+                <i class="material-icons">close</i>
+            </button>
+            <h2>Reportar Problema Ambiental</h2>
+            <p class="report-modal-subtitle">Ayúdanos a proteger el medio ambiente. Reporta cualquier situación que afecte nuestro entorno.</p>
+            <form id="report-form">
+                <div class="form-group">
+                    <label for="report-type">Tipo de reporte *</label>
+                    <select id="report-type" name="type" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="queja">Queja</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="solicitud">Solicitud</option>
+                        <option value="denuncia">Denuncia ambiental</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="report-location">Ubicación *</label>
+                    <input type="text" id="report-location" name="location" placeholder="Ej: Calle 16, Magangué" required>
+                </div>
+                <div class="form-group">
+                    <label for="report-description">Descripción del problema *</label>
+                    <textarea id="report-description" name="description" rows="5" placeholder="Describe detalladamente el problema ambiental que has observado..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="report-contact">Datos de contacto <span class="optional-label">(opcional - puedes dejar en blanco para reporte anónimo)</span></label>
+                    <input type="text" id="report-contact" name="contact" placeholder="Teléfono o email (opcional)">
+                </div>
+                <button type="submit" class="btn btn-submit">Enviar reporte</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
