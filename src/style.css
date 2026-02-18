@@ -331,8 +331,10 @@ nav ul li a:hover {
     color: var(--text-light);
     position: relative;
     overflow: hidden;
+    background-color: var(--accent-olive);
 }
 
+/* Imagen hero: río y selva visibles (composición completa) */
 .hero-video {
     position: absolute;
     top: 50%;
@@ -344,6 +346,7 @@ nav ul li a:hover {
     z-index: 0;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    object-position: center 55%;
 }
 
 .hero::after {
@@ -353,7 +356,7 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(30, 33, 24, 0.7), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(to bottom, rgba(30, 33, 24, 0.5), rgba(0, 0, 0, 0.4));
     z-index: 1;
 }
 
@@ -620,8 +623,8 @@ footer {
     
     /* Hero Section */
     .hero h1 {
-        font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
-        line-height: 1.15 !important;
+        font-size: clamp(2rem, 8vw, 2.8rem) !important;
+        line-height: 1.2 !important;
         max-width: 90vw;
         margin-left: auto;
         margin-right: auto;
@@ -630,6 +633,7 @@ footer {
         white-space: normal;
         overflow: hidden;
         display: block;
+        font-weight: 700 !important;
     }
     
     .hero h1 br {
@@ -860,12 +864,34 @@ footer {
     box-sizing: border-box;
 }
 
+/* Suavizar bordes del carrusel para que no se vean cards cortadas */
+.ejes-container::before,
+.ejes-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ejes-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--beige-dark) 0%, transparent 100%);
+}
+
+.ejes-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--beige-dark) 0%, transparent 100%);
+}
+
 .ejes-track {
     display: flex;
     gap: 1.5rem;
     animation: slide-left 50s linear infinite;
     width: fit-content;
-    padding: 0;
+    padding: 0 80px;
     margin: 0;
     will-change: transform;
     min-width: 100%;
