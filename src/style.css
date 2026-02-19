@@ -724,18 +724,22 @@ footer {
     }
     
     /* Ejes Temáticos */
+    .ejes-tematicos {
+        margin-top: 3rem;
+    }
+    
     .ejes-container {
         padding: 1.5rem 0;
     }
     
     .ejes-track {
-        padding: 0 220px;
         gap: 1rem;
+        padding: 0 1rem;
     }
     
     .eje-card {
-        min-width: 200px;
-        width: 200px;
+        width: 240px;
+        min-width: 240px;
         height: 160px;
         font-size: 0.85rem;
         padding: 1rem;
@@ -862,30 +866,36 @@ footer {
     position: relative;
 }
 
-/* Ejes Temáticos - Cards animadas */
+/* Ejes Temáticos - Carrusel animado ancho completo */
+.ejes-tematicos {
+    margin-top: 4rem;
+}
+
 .ejes-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     overflow-x: hidden;
-    position: relative;
     padding: 2rem 0;
-    box-sizing: border-box;
+    position: relative;
 }
 
 .ejes-track {
     display: flex;
     gap: 1.5rem;
-    animation: slide-left 50s linear infinite;
     width: fit-content;
-    padding: 0 320px;
-    margin: 0;
-    will-change: transform;
+    padding: 0 1.5rem;
+    animation: ejes-slide 45s linear infinite;
+}
+
+@keyframes ejes-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .eje-card {
-    min-width: 280px;
+    flex-shrink: 0;
     width: 280px;
+    min-width: 280px;
     height: 200px;
     background-color: var(--primary-olive);
     color: var(--text-light);
@@ -900,50 +910,39 @@ footer {
     font-weight: 500;
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     gap: 0;
 }
 
 .eje-icon {
-    font-size: 64px;
-    width: 64px;
-    height: 64px;
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     color: currentColor;
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 0.5rem;
     line-height: 1;
-    padding: 0;
 }
 
-.eje-card span {
+.eje-card span:not(.eje-icon) {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    line-height: 1.4;
+    line-height: 1.35;
     min-height: 2.8em;
     text-align: center;
-    margin-top: -0.5rem;
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em;
 }
 
 .eje-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes slide-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Contracts List Styles */
@@ -1083,9 +1082,9 @@ footer {
     }
     
     .eje-card {
-        min-width: 250px;
-        width: 250px;
-        height: 190px;
+        width: 260px;
+        min-width: 260px;
+        height: 180px;
     }
     
     .contract-item {
