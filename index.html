@@ -56,12 +56,12 @@
 
     <main>
         <section id="inicio" class="hero">
-            <img src="/sandy-ravaloniaina-ZhbgXIWpS-0-unsplash.jpg" alt="" class="hero-video" />
+            <img src="/backroad-packers-QRBQe_Xa5Kg-unsplash.jpg" alt="" class="hero-video" />
             <div class="hero-content">
                 <p>Tu aliado estratégico para</p>
                 <h1>EL FORTALECIMIENTO SOCIAL Y AMBIENTAL</h1>
-                <p>"Contribuimos a preservar el medio ambiente de manera integral, apoyando al cumplimiento de los fines
-                    sociales del Estado y mejorando la calidad de vida de la población."</p>
+                <p>Contribuimos a preservar el medio ambiente de manera integral, apoyando al cumplimiento de los fines
+                    sociales del Estado y mejorando la calidad de vida de la población.</p>
                 <div class="hero-buttons">
                     <a href="#nosotros" class="btn">Conoce más</a>
                     <button class="btn btn-report" id="report-btn">Reportar problema ambiental</button>
@@ -75,7 +75,7 @@
                 <div class="divider"></div>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div>
+                <div class="nosotros-text">
                     <p>La Fundación para el Desarrollo Socioambiental y Empresarial Especializado
                         <strong>“FUNDESAE”</strong> es una entidad colombiana sin ánimo de lucro constituida en 2010.
                         Estamos conformados por un grupo de profesionales interdisciplinarios interesados en promover el
@@ -92,8 +92,10 @@
                 </div>
             </div>
 
-            <div
-                style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 4rem;">
+            <div class="vision-container" style="margin-top: 4rem;">
+                <div class="vision-image-container">
+                    <img src="/bernd-dittrich-G4tNFiZecoc-unsplash.jpg" alt="Gestión Ambiental" class="img-card">
+                </div>
                 <div class="vision-box">
                     <h2>Nuestra Visión</h2>
                     <p>Ser líderes en el fortalecimiento social y ambiental con proyección empresarial, reconocidos a
@@ -105,18 +107,21 @@
                         sostenible, en búsqueda del mejoramiento de la calidad de vida de la población en el sector de
                         saneamiento básico y agua potable.</p>
                 </div>
-                <div class="section-image-container">
-                    <img src="/bernd-dittrich-G4tNFiZecoc-unsplash.jpg" alt="Gestión Ambiental" class="img-card">
-                </div>
             </div>
 
-            <div
-                style="margin-top: 5rem; margin-bottom: 5rem; text-align: center; background-color: white; padding: 4rem; border: 1px solid var(--beige-dark);">
-                <h2 style="margin-bottom: 2rem;">Nuestro Equipo de Trabajo</h2>
-                <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">FUNDESAE cuenta con un
-                    recurso humano idóneo, capacitado para ejecutar todos nuestros proyectos; somos profesionales en
-                    distintas disciplinas y con perfiles y saberes específicos que permitirán satisfacer las necesidades
-                    y demandas de nuestros clientes.</p>
+            <div style="margin-top: 5rem; margin-bottom: 5rem;">
+                <div class="equipo-container">
+                    <div class="equipo-text">
+                        <h2 style="margin-bottom: 1.5rem; font-size: 2.5rem; font-weight: 600;">Nuestro Equipo de Trabajo</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7;">FUNDESAE cuenta con un
+                            recurso humano idóneo, capacitado para ejecutar todos nuestros proyectos; somos profesionales en
+                            distintas disciplinas y con perfiles y saberes específicos que permitirán satisfacer las necesidades
+                            y demandas de nuestros clientes.</p>
+                    </div>
+                    <div class="equipo-image-container">
+                        <img src="/sandy-ravaloniaina-ZhbgXIWpS-0-unsplash.jpg" alt="Equipo de Trabajo" class="img-card">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -291,9 +296,8 @@
                     <h4>Legal</h4>
                     <p><strong>CARMEN LUCIA ALVAREZ LOPEZ</strong></p>
                     <p>Representante Legal</p>
-                    <br>
-                    <p>Vigilada por la Superintendencia de Economía Solidaria</p>
                     <p>Personería Jurídica No. 00011508</p>
+                    <p style="margin-top: 1rem;"><a href="/politica-privacidad.html" style="color: var(--primary-olive); text-decoration: none; font-size: 0.95rem;">Política de Privacidad</a></p>
                 </div>
             </div>
             <div class="superintendencia-logo-section">
@@ -309,6 +313,19 @@
             </a>
         </div>
     </footer>
+
+    <!-- Banner de Políticas de Privacidad -->
+    <div class="privacy-banner" id="privacy-banner">
+        <div class="privacy-banner-content">
+            <div class="privacy-banner-text">
+                <p>Este sitio web utiliza cookies y recopila datos personales según nuestra <a href="/politica-privacidad.html">Política de Privacidad</a>. Al continuar navegando, aceptas nuestro uso de cookies y el tratamiento de datos.</p>
+            </div>
+            <div class="privacy-banner-buttons">
+                <a href="/politica-privacidad.html" class="btn-privacy-link">Más información</a>
+                <button class="btn-privacy-accept" id="privacy-accept">Aceptar</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal de Reporte Ambiental -->
     <div class="report-modal" id="report-modal">

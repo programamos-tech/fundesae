@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - FUNDESAE</title>
+    <link rel="icon" type="image/png" href="/hand-holding-leaves.png">
+    <link rel="apple-touch-icon" href="/hand-holding-leaves.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <style>
+        body {
+            background-color: #f5f5f7 !important;
+        }
+        .privacy-page {
+            padding: 8rem 0 4rem;
+            min-height: 100vh;
+            background-color: #f5f5f7;
+            position: relative;
+            z-index: 1;
+        }
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 4rem;
+            position: relative;
+            z-index: 2;
+        }
+        .privacy-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: #ffffff;
+            background-color: #3d4332;
+            padding: 1.5rem 2rem;
+            margin: 0 -2rem 2rem -2rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 3;
+        }
+        .privacy-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #3d4332;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3d4332;
+            font-weight: 600;
+            position: relative;
+            z-index: 3;
+        }
+        .privacy-content p {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 3;
+        }
+        .privacy-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 3;
+        }
+        .privacy-content li {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        .privacy-content strong {
+            color: #3d4332;
+            font-weight: 600;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #3d4332;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background-color: #5d664c;
+            transform: translateY(-2px);
+        }
+        .last-updated {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 3;
+        }
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 2rem 1.5rem;
+            }
+            .privacy-content h1 {
+                font-size: 2.5rem;
+                padding: 1.25rem 1.5rem;
+                margin: 0 -1.5rem 2rem -1.5rem;
+            }
+            .privacy-content h2 {
+                font-size: 1.75rem;
+            }
+            .privacy-content p,
+            .privacy-content li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-inner">
+            <a href="/index.html" class="logo-container">
+                <img src="/hand-holding-leaves.png" alt="FUNDESAE Logo" class="logo-icon-header">
+                <div class="logo">FUNDESAE</div>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/index.html#inicio">Inicio</a></li>
+                    <li><a href="/index.html#nosotros">Nosotros</a></li>
+                    <li><a href="/index.html#componentes">Componentes</a></li>
+                    <li><a href="/index.html#servicios">Servicios</a></li>
+                    <li><a href="/index.html#portafolio">Contratos</a></li>
+                </ul>
+            </nav>
+            <a href="/index.html#contacto" class="btn header-btn">Contacto</a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="material-icons">menu</i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <nav class="mobile-menu">
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                <i class="material-icons">close</i>
+            </button>
+            <ul>
+                <li><a href="/index.html#inicio">Inicio</a></li>
+                <li><a href="/index.html#nosotros">Nosotros</a></li>
+                <li><a href="/index.html#componentes">Componentes</a></li>
+                <li><a href="/index.html#servicios">Servicios</a></li>
+                <li><a href="/index.html#portafolio">Contratos</a></li>
+                <li><a href="/index.html#contacto" class="btn">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="privacy-page">
+        <div class="privacy-content">
+            <h1>Política de Privacidad</h1>
+            <p class="last-updated">Última actualización: Febrero 2026</p>
+
+            <p>La <strong>Fundación para el Desarrollo Socioambiental y Empresarial Especializado "FUNDESAE"</strong> 
+            (en adelante "FUNDESAE", "nosotros", "nuestra" o "la Fundación") se compromete a proteger la privacidad 
+            y los datos personales de los usuarios que visitan nuestro sitio web y utilizan nuestros servicios.</p>
+
+            <h2>1. Información que Recopilamos</h2>
+            <p>Cuando utiliza nuestro formulario de "Reportar Problema Ambiental", podemos recopilar la siguiente información:</p>
+            <ul>
+                <li><strong>Tipo de reporte:</strong> Queja, reclamo o solicitud</li>
+                <li><strong>Ubicación:</strong> Dirección o lugar donde se presenta el problema ambiental</li>
+                <li><strong>Descripción del problema:</strong> Detalles sobre la situación reportada</li>
+                <li><strong>Datos de contacto (opcional):</strong> Teléfono o correo electrónico, si decide proporcionarlos</li>
+            </ul>
+            <p>Es importante destacar que el reporte puede realizarse de forma <strong>anónima</strong>, sin proporcionar datos de contacto.</p>
+
+            <h2>2. Uso de la Información</h2>
+            <p>La información recopilada a través del formulario de reporte ambiental se utiliza exclusivamente para:</p>
+            <ul>
+                <li>Procesar y dar seguimiento a los reportes de problemas ambientales</li>
+                <li>Contactar al usuario (solo si proporcionó datos de contacto) para obtener información adicional o dar seguimiento al reporte</li>
+                <li>Cumplir con nuestros objetivos de protección y preservación del medio ambiente</li>
+            </ul>
+
+            <h2>3. Almacenamiento y Transmisión de Datos</h2>
+            <p>Los datos proporcionados a través del formulario se envían directamente a nuestro número de WhatsApp 
+            (<strong>3002061711</strong>) para su procesamiento. No almacenamos estos datos en servidores propios ni 
+            compartimos esta información con terceros, excepto cuando sea necesario para dar seguimiento al reporte 
+            o cuando la ley lo requiera.</p>
+
+            <h2>4. Seguridad de los Datos</h2>
+            <p>FUNDESAE implementa medidas de seguridad técnicas y organizativas para proteger los datos personales 
+            contra acceso no autorizado, alteración, divulgación o destrucción. Sin embargo, ningún método de transmisión 
+            por Internet es 100% seguro, y no podemos garantizar la seguridad absoluta de la información.</p>
+
+            <h2>5. Sus Derechos</h2>
+            <p>De acuerdo con la Ley 1581 de 2012 de Colombia sobre protección de datos personales, usted tiene derecho a:</p>
+            <ul>
+                <li>Conocer, actualizar y rectificar sus datos personales</li>
+                <li>Solicitar prueba de la autorización otorgada</li>
+                <li>Revocar la autorización y/o solicitar la supresión del dato</li>
+                <li>Acceder de forma gratuita a sus datos personales</li>
+                <li>Presentar quejas ante la Superintendencia de Industria y Comercio por infracciones a la ley</li>
+            </ul>
+
+            <h2>6. Consentimiento</h2>
+            <p>Al utilizar nuestro formulario de reporte ambiental y proporcionar información personal, usted consiente 
+            la recopilación, uso y procesamiento de sus datos de acuerdo con esta Política de Privacidad.</p>
+
+            <h2>7. Cambios a esta Política</h2>
+            <p>FUNDESAE se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. 
+            Cualquier cambio será publicado en esta página con la fecha de "Última actualización" correspondiente. 
+            Le recomendamos revisar periódicamente esta política para estar informado sobre cómo protegemos su información.</p>
+
+            <h2>8. Contacto</h2>
+            <p>Si tiene preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad o el manejo 
+            de sus datos personales, puede contactarnos a través de:</p>
+            <ul>
+                <li><strong>Teléfono:</strong> 3023886273 / 3023886293</li>
+                <li><strong>Correo electrónico:</strong> fundesae@hotmail.com</li>
+                <li><strong>Dirección:</strong> Calle 16 No. 17 – 5 Piso 2, Magangué, Bolívar, Colombia</li>
+            </ul>
+
+            <a href="/index.html" class="back-link">
+                <i class="material-icons">arrow_back</i>
+                Volver al inicio
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <img src="/hand-holding-leaves.png" alt="FUNDESAE Logo" class="footer-logo-icon">
+                        <h4>FUNDESAE</h4>
+                    </div>
+                    <p>Fundación para el Desarrollo Socioambiental y Empresarial Especializado</p>
+                    <p>NIT. 900.387.099 – 4</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p><i class="material-icons footer-icon">phone</i> 3023886273 / 3023886293</p>
+                    <p><i class="material-icons footer-icon">email</i> fundesae@hotmail.com</p>
+                    <p><i class="material-icons footer-icon">location_on</i> Calle 16 No. 17 – 5 Piso 2 Magangué, Bolívar</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><strong>CARMEN LUCIA ALVAREZ LOPEZ</strong></p>
+                    <p>Representante Legal</p>
+                    <p>Personería Jurídica No. 00011508</p>
+                </div>
+            </div>
+            <div class="superintendencia-logo-section">
+                <p style="margin-bottom: 1rem; opacity: 0.7; font-size: 0.85rem;">Vigilada por:</p>
+                <img src="/20230608_imagotipo_supersolidaria_horizontal_0.png" alt="Superintendencia de Economía Solidaria" class="superintendencia-logo">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FUNDESAE. Todos los derechos reservados.</p>
+                <p class="footer-credit">Designed and powered by <a href="https://andresruss.com" target="_blank" rel="noopener noreferrer">andresruss.st</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/src/main.js"></script>
+</body>
+</html>

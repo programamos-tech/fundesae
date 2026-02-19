@@ -284,6 +284,68 @@ if (reportForm) {
     });
 }
 
+// Scroll Animations con Intersection Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            scrollObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Aplicar animaciones a elementos cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    // Títulos de sección
+    document.querySelectorAll('.section-title').forEach((el, index) => {
+        el.classList.add('scroll-animate', 'fade-in', `delay-${index % 4}`);
+        scrollObserver.observe(el);
+    });
+
+    // Cards
+    document.querySelectorAll('.card').forEach((el, index) => {
+        el.classList.add('scroll-animate', 'fade-in', `delay-${index % 4}`);
+        scrollObserver.observe(el);
+    });
+
+    // Imágenes de sección
+    document.querySelectorAll('.section-image-container, .equipo-image-container, .vision-image-container').forEach((el, index) => {
+        const isEven = index % 2 === 0;
+        el.classList.add('scroll-animate', isEven ? 'slide-right' : 'slide-left', `delay-${index % 4}`);
+        scrollObserver.observe(el);
+    });
+
+    // Texto de sección nosotros
+    document.querySelectorAll('.nosotros-text').forEach((el) => {
+        el.classList.add('scroll-animate', 'slide-left', 'delay-1');
+        scrollObserver.observe(el);
+    });
+
+    // Vision box y texto de secciones
+    document.querySelectorAll('.vision-box, section#nosotros > .container > div > div:not(.section-image-container):not(.vision-box):not(.nosotros-text)').forEach((el, index) => {
+        const isEven = index % 2 === 0;
+        el.classList.add('scroll-animate', isEven ? 'slide-left' : 'slide-right', `delay-${index % 4}`);
+        scrollObserver.observe(el);
+    });
+
+    // Items de contratos
+    document.querySelectorAll('.contract-item').forEach((el, index) => {
+        el.classList.add('scroll-animate', 'fade-in', `delay-${index % 3}`);
+        scrollObserver.observe(el);
+    });
+
+    // Footer sections
+    document.querySelectorAll('.footer-section').forEach((el, index) => {
+        el.classList.add('scroll-animate', 'fade-in', `delay-${index % 3}`);
+        scrollObserver.observe(el);
+    });
+});
+
 // Función para mostrar notificaciones
 function showNotification(message, type = 'success') {
     // Crear elemento de notificación
@@ -315,3 +377,37 @@ function showNotification(message, type = 'success') {
         }, 300);
     }, 4000);
 }
+
+// Privacy Banner
+document.addEventListener('DOMContentLoaded', () => {
+    const privacyBanner = document.getElementById('privacy-banner');
+    const privacyAcceptBtn = document.getElementById('privacy-accept');
+    
+    // Verificar si el usuario ya aceptó las políticas
+    const privacyAccepted = localStorage.getItem('privacyAccepted');
+    
+    if (!privacyAccepted && privacyBanner) {
+        // Mostrar el banner después de un breve delay
+        setTimeout(() => {
+            privacyBanner.classList.add('show');
+        }, 500);
+    }
+    
+    // Manejar clic en "Aceptar"
+    if (privacyAcceptBtn) {
+        privacyAcceptBtn.addEventListener('click', () => {
+            // Guardar preferencia en localStorage
+            localStorage.setItem('privacyAccepted', 'true');
+            
+            // Ocultar banner con animación
+            privacyBanner.classList.remove('show');
+            
+            // Remover del DOM después de la animación
+            setTimeout(() => {
+                if (document.body.contains(privacyBanner)) {
+                    privacyBanner.remove();
+                }
+            }, 400);
+        });
+    }
+});
